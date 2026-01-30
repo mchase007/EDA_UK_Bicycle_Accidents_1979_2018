@@ -1,5 +1,4 @@
 # Exploratory Data Analysis of Bicycle Accidents In Great Britain (1979 - 2018)
-
 Bicycles for rent are now a popular means of transport in London especially when there are train cancellations or strikes.
 There are several providers of this service with Lime and Forest as the most popular e-bike options.
 Santander also offers pedal bicycles across the city.
@@ -15,20 +14,20 @@ https://www.kaggle.com/datasets/johnharshith/bicycle-accidents-in-great-britain-
 - H1: There are differences/relationships between environmental/personal factors and the severity/casualties of bicycle accidents
 
 - Population: UK cyclists involved in accidents(1979 - 2018)
-- Independent Variable(s): Environmental factors(road conditions, road type, lighting condition, weather condition, time of the day)
-                         Individual Factors(gender, age group)
+- Independent Variable(s): Environmental factors(road conditions, road type, lighting condition, weather condition, time of the day) and Individual factors(gender, age group)
 - Dependent Variable(s): Severity and Number of casualties
 
+-----------------------------------------------------------------------------------------
 #### Methods
-This data analysis involved the following steps:
+This data analysis involved the following steps using the Python data ecosystem:
 - Load libraries and datasets
 - Summarise and clean datasets
 - Univariate and Bivariate Descriptive data analysis
 - Hypothesis tests
 - Results and Findings
 
-#### Results
-
+-----------------------------------------------------------------------------------------
+#### Results and Findings
 - Number of vehicles: 
 The mean and median of the number of vehicles involved in bicylce accidents was 1.98 and 2.0 respectively. The mode of this feature was 2 vehicles with a count of 758784 incidents. The variance and standard deviation of this feature was 0.097 and 0.311 respectively. The range of the number of vehicles was 12 and the inter-quartile range (IQR) was 0.0.
 
@@ -46,6 +45,7 @@ Number of vehicles(Statistic: 0.4672, p-value: 0.0000), Number of casualties(Sta
 and speed limit (Statistic: 0.4839,  p-value: 0.0000) were statistically (Kolmogorov-Smirnov Test) and
 visually(q-q plot, box-plot) determined to have a non-normal distribution.
 
+-----------------------------------------------------------------------------------------
 ##### Environmental Factors
 - Accidents happened the most frequently on dry(n=633936, 76.58%) and wet(n=184279, 22.26%) road conditions.
 - Accidents occured overwhelmingly on days with clear(n=683162, 82.5%) weather.
@@ -65,6 +65,7 @@ Single carriageway(n=656703, 79.32%), Roundabout(n=75066, 9.06%) and Dual carria
 - Light conditions on Number of casualties / Severity: 
 The highest number of casualties occured during Daylight(n=660657, 79.80%) and Darkness lights lit (n=142039,	17.15%). The difference between light conditions was statistically significant (H = 272.41, p <0.001) with an effect size of 0.000329. The difference between light conditions and the severity of accidents was statistically significant (chi_statistic = 2923.25, p = 0.0, cramers-v = 0.0420).
 
+-----------------------------------------------------------------------------------------
 ##### Time  
 - Traffic status on Number of casualties / Severity: 
 The highest number of casualties was observed during Day Off-Peak(n=197129,	23.81%), Day Off-Peak(n=197129,	23.81%),Evening Rush Hour(n=214741,	25.93%)
@@ -75,10 +76,10 @@ and the Morning Rush Hour(n=166617,	20.12%). The difference was statistiaclly si
 
 - Number of casualties are higher during warmer periods(May to October)
 
-
+-----------------------------------------------------------------------------------------
 ##### Individual Factors
 - The most common accident severity category was Slight(n=681578, 82%) whiles Fatal(n=6730, 1%) was the least common.
-- This distribution of severity was also observed when severity was compared to gender and age group.
+- This distribution of severity across gender and age groups was similar to the distribution observed in the entire dataset.
 - A majority of accidents involved Males(n= 660031, 79%). Females(n=167721) were involved in 20% of accidents.
 - By age group, 11 to 15 (n= 169945, 21%), 26 to 35 (n=145081, 18%) and 16 to 20(n=122604, 15%) were the most frequently involved in accidents.
 - 56 to 65(n=41913, 5%) and 66 to 75(n=15663, 2%) were the least frequently involved in bicycle accidents.
@@ -87,10 +88,13 @@ and the Morning Rush Hour(n=166617,	20.12%). The difference was statistiaclly si
 - Age Group on Number of casualties / Severity: 
 The highest number of casualties was observed in the 16 to 20 (n=122602, 14.80%), 26 to 35 (n=145078, 17.52%) and 11 to 15 (n=169943, 20.52%) age groups. The Kruskal-Wallis test indicated the differences were significant (H: 1287.28, p < 0.001). The effect size was observed as 0.00155.
 
-The distribution of severity(fatal and serious) among age groups were the following 66 to 75(fatal(%)=3.84, serious(%)=26.18), 36 to 45(fatal(%)=0.78, serious(%)=17.26), 46 to 55(fatal(%)=1.24, serious(%)=20.48), 56 to 65(fatal(%)=2.06, serious(%)=23.46). The difference of severity between the age group (chi_statistic = 7371.50, p = 0.0, cramers-v = 0.066) was statistically significant 
+The distribution of severity(fatal and serious) among age groups were the following 66 to 75(fatal(%)=3.84, serious(%)=26.18), 36 to 45(fatal(%)=0.78, serious(%)=17.26), 46 to 55(fatal(%)=1.24, serious(%)=20.48), 56 to 65(fatal(%)=2.06, serious(%)=23.46). Fatal and serious injuries increase with age.
+
+The difference of severity between the age group (chi_statistic = 7371.50, p = 0.0, cramers-v = 0.066) was statistically significant 
 
 
-- Gender on Number of casualties / Severity: 
+- Gender on Number of casualties / Severity:
+- Males experienced more severe(Males=17.08%, Females=16.01%) and fatal(Males=0.84%, Females=0.71%) injuries than females. However, females experience more slight injuries than males.
 By gender, The difference between the various genders was observed to be statistically signigicant (H = 24.72, p < 0.001). The effect size was 0.0000298 These were the distribution of casualties by gender: Other(n=119, 0.014%), Female(n=167717, 20.25%) and Male(n=660025, 79.72%). 
 
 The proportion of fatal and serious injuries were reported as Female(fatal(%)=0.71, serious(%)=16.01) and Male(fatal(%)=0.84, serious(%)=17.08). An assumption for the chi-square test were not met. This was because the percentage of expected values less than 5 (33.33%) exceeded 20%. The hypothesis was therefore not tested on these features.
@@ -102,16 +106,22 @@ Little to no correlation (0.071)
 Number of vehicles x Number of casualties:
 Very weak positive correlation (0.14)
 
-#### Findings
-In progress
+-----------------------------------------------------------------------------------------
+#### Comments
+- Majority of cycle accidents are slight which may indicate effectiveness of current interventions. Severe and fatal injuries are more common in males hence targetting this group in interventions may be helpful.Further investigation to explain the rationale for the gender differences is necessary [Injury severity over time??]
+- Fatal and serious injuries increase with age. Preventing accidents in older cyclists should be a priority. Targetted campaigns, special cycle features such as collision warning and specialised medical response in areas with elderly cylists may help reduce accidents and manage trauma in elderly cyclists.
 
+
+-----------------------------------------------------------------------------------------
 #### Limitations
 - The Chi-square test was not feasible for gender and severity. A Fisher–Freeman–Halton exact test was a considered option but not directly available in python.
+- Environmental and human factors were investigated individually. 
 - The speed limit and number of vehicles were not investigated as factors in this analysis.
 - Missing and unknown data values were not deleted but appropriately labelled and ignored during analysis.
 - There were outliers in the number of casualties column but there were not removed.
 - The relationship between time and environmental factors was not investigated.
-
+  
+-----------------------------------------------------------------------------------------
 #### References
 - Mishra, P., Pandey, C. M., Singh, U., Gupta, A., Sahu, C., & Keshri, A. (2019). Descriptive statistics and normality tests for statistical data. Annals of cardiac anaesthesia, 22(1), 67–72. https://doi.org/10.4103/aca.ACA_157_18.
 - Oluleye, A. (2023). Exploratory data analysis with Python cookbook: Over 50 recipes to analyze, visualize, and extract insights from structured and unstructured data. Packt Publishing
@@ -122,8 +132,7 @@ In progress
 - Cramer, D., & Howitt, D. L. (2004). The SAGE Dictionary of Statistics: A Practical Resource for Students in the Social Sciences. SAGE Publications Ltd.
 - King, B. M., Rosopa, P. J., & Minium, E. W. (2018). Statistical reasoning in the behavioral sciences (7th ed.). John Wiley & Sons. 
 - https://peterstatistics.com
-
-#### To-do list
-- Adjusted standardised residual tests??
-- Dunn's test??
-- Time series analysis??
+- https://www.kaggle.com/code/prashant111/complete-guide-on-time-series-analysis-in-python
+- 
+- https://claude.ai/
+- https://chatgpt.com/
