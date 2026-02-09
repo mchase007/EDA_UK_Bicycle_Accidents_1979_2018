@@ -1,12 +1,14 @@
 # Exploratory Data Analysis of Bicycle Accidents In Great Britain (1979 - 2018)
-Bicycles for rent are now a popular means of transport in London especially when there are train cancellations or strikes.
-There are several providers of this service with Lime and Forest as the most popular e-bike options.
-Santander also offers pedal bicycles across the city.
+----------------------------------------------------------------------------------------------------
+## Introduction
+A bike-sharing scheme (BSS) is a temporary bicycle hiring business that provides cycles through membership fees or on-demand payment options last mile connectivity (Nikitas, 2018) and improving mainstream cycling (Goodman et al., 2014). There are several providers of this service in London with Lime and Forest as the most popular e-bike options. Santander also offers pedal bicycles across the city.
 
------------------------------------------------------------------------------------------
-Cycling combines exercise and convenient city transport. It improves the cardiovascular and peripheral muscle tone[Reference]
-However, this healthy and active transportation has its downsides. Cycling accidents can increase cost burden to NHS, productivity loss and long term disability. This is therefore an attempt to highlight trends in the public health impact of cycling in London using data from
-https://www.kaggle.com/datasets/johnharshith/bicycle-accidents-in-great-britain-1979-to-2018/data
+Cycling reduces the risk of death and developing chronic diseases such as heart disease, stroke, hypertension, type 2 diabetes, and some malignancies (particularly breast and colon). Physical inactivity predisposes to heart disease and costing the NHS as much as £1.2bn ($1.6bn; €1.4bn) annually (Welsh et al., 2020)
+
+Cycling also reduce carbon emissions particularly when substituted with car, bus or train trips for short distances. Cycling is also a feasible exercise for individuals for whom sports are impractical for several reasons including physical, economic or social(Kahlmeier et al., 2011). 
+
+However, this healthy and active transportation has its downsides. Cyclist are one of the group of road users more likely to experience fatal accidents (Beck et al., 2007). Cycling accidents can increase cost burden to NHS, productivity loss and long term disability. This exploratory data analysis is therefore an attempt to highlight trends of cycle accidents and the public health impact of cycling in London using data from
+https://www.kaggle.com/datasets/johnharshith/bicycle-accidents-in-great-britain-1979-to-2018/data.
 
 -----------------------------------------------------------------------------------------
 ## Summary of Hypothesis:
@@ -139,7 +141,12 @@ visually(q-q plot, box-plot) determined to have a non-normal distribution.
 - Dinno, A. (2015). Nonparametric Pairwise Multiple Comparisons in Independent Groups using Dunn’s Test. The Stata Journal: Promoting Communications on Statistics and Stata, 15(1), 292-300. https://doi-org.ezproxy.tees.ac.uk/10.1177/1536867X1501500117 (Original work published 2015)
 - Fiel Peres F. Effect sizes for nonparametric tests. Biochem Med (Zagreb). 2026 Feb 15;36(1):010101. doi: 10.11613/BM.2026.010101. Epub 2025 Dec 15. PMID: 41399660; PMCID: PMC12701665.
 - Cramer, D., & Howitt, D. L. (2004). The SAGE Dictionary of Statistics: A Practical Resource for Students in the Social Sciences. SAGE Publications Ltd.
-- King, B. M., Rosopa, P. J., & Minium, E. W. (2018). Statistical reasoning in the behavioral sciences (7th ed.). John Wiley & Sons. 
+- King, B. M., Rosopa, P. J., & Minium, E. W. (2018). Statistical reasoning in the behavioral sciences (7th ed.). John Wiley & Sons.
+- S. Kahlmeier, N. Cavill, H. Dinsdale, H. Rutter, T. Götschi, C. Foster, P. Kelly, D. Clarke, P. Oja, R. Fordham, D. Stone, F. Racioppi. Health Economic Assessment Tools (heat) for Walking and for Cycling. Methodology and User Guide. Economic Assessment of Transport Infrastructure and Policies.
+- Laurie F. Beck, Ann M. Dellinger, Mary E. O'Neil, Motor Vehicle Crash Injury Rates by Mode of Travel, United States: Using Exposure-Based Methods to Quantify Differences, American Journal of Epidemiology, Volume 166, Issue 2, 15 July 2007, Pages 212–218, https://doi.org/10.1093/aje/kwm064
+- Welsh, C., Celis-Morales, C., Ho, F., Lyall, D. M., Mackay, D., Ferguson, L., . . . Welsh, P. (2020). Association of injury related hospital admissions with commuting by bicycle in the UK: Prospective population based study. BMJ : British Medical Journal (Online), 368 doi:https://doi.org/10.1136/bmj.m336
+- Alexandros Nikitas(2018). Understanding bike-sharing acceptability and expected usage patterns in the context of a small city novel to the concept: A story of ‘Greek Drama
+- A. Goodman, J. Green, J. Woodcock.The role of bicycle sharing systems in normalising the image of cycling: An observational study of London cyclists. Journal Of Transport & Health, 1 (1) (2014), pp. 5-8
 - https://peterstatistics.com
 - https://www.kaggle.com/code/prashant111/complete-guide-on-time-series-analysis-in-python
 - https://claude.ai/
