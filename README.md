@@ -1,7 +1,7 @@
 # Exploratory Data Analysis of Bicycle Accidents In Great Britain (1979 - 2018)
 ----------------------------------------------------------------------------------------------------
 ## Introduction
-A bike-sharing scheme (BSS) is a temporary bicycle hiring business that provides cycles through membership fees or on-demand payment options last mile connectivity (Nikitas, 2018) and improving mainstream cycling (Goodman et al., 2014). There are several providers of this service in London with Lime and Forest as the most popular e-bike options. Santander also offers pedal bicycles across the city.
+A bike-sharing scheme (BSS) is a temporary bicycle hiring business that provides cycles through membership fees or on-demand payment as an option for last mile connectivity (Nikitas, 2018) and improving mainstream cycling (Goodman et al., 2014). There are several providers of this service in London with Lime and Forest as the most popular e-bike options. Santander also offers pedal bicycles across the city.
 
 Cycling reduces the risk of death and developing chronic diseases such as heart disease, stroke, hypertension, type 2 diabetes, and some malignancies (particularly breast and colon). Physical inactivity predisposes to heart disease and costing the NHS as much as £1.2bn ($1.6bn; €1.4bn) annually (Welsh et al., 2020)
 
