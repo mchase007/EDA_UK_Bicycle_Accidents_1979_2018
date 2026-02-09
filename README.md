@@ -79,14 +79,14 @@ visually(q-q plot, box-plot) determined to have a non-normal distribution.
 #### Traffic status on Number of casualties / Severity: 
 - The highest number of accident records was observed during Morning Rush Hour(n=166617, 20.12%), Day Off-Peak(n=197129, 23.81%), Evening Rush Hour(n=214741, 25.93%). The difference was statistiaclly significant (H = 300.66, p < 0.001) with an effect size of 0.000363. The Morning Rush Hour period was statistically different from all other periods while all other periods had insignificant differences from one another. The effect size shows the that traffic status has negligible practical magnitude on casualties per accident.
 
-- The association between the traffic status and accident severity was statistically significant but weak (chi_statistic = 1474.4563765293549, p = 0.0, cramers-v = 0.029). Night time and dawn is when the most severe injuries occured.
+- The association between the traffic status and accident severity was statistically significant but weak (chi_statistic = 1474.4563765293549, p = 0.0, cramers-v = 0.029). Night time and dawn (residuals: fatal= +18.86, serious= +21.23) and Day Off-peak(residuals: fatal= +1.63, serious=  +1.43) is when the most severe injuries occured.
 
 #### Day on Number of casualties / Severity: 
 - Accidents were more common on week days than weekends. Wednesday(16.52%), Tuesday(16.49%), Thursday(16.46%), Friday(15.95%), Monday(15.19%), Saturday(10.59%), Sunday(8.80%). The difference between the number of casualties per accident was statistically significant (H = 628.1438, p < 0.001) with an effect size of 0.000758. Saturday and Sunday were statistically different from weekdays and each other. There was no statistical difference between the weekdays. The practical magnitude of the day of the week on the number of casualties per accident was negligible.
 
-- The weekends had the highest severe accidents with Sunday(1%) and Saturday(0.81%) having the highest fatal rate
-- Chi-sqaure for severity x day
-- Number of casualties are higher during warmer periods(May to October)
+- The association between the traffic status and accident severity was statistically significant but weak (chi_statistic = 915.970, p < 0.001, cramers-v = 0.02352). Saturday (residuals: fatal= +4.09, serious= +11.75) and Sunday(residuals: fatal= +7.55, serious= +19.81) is when the most severe injuries occured.
+
+- Number of casualties are higher during warmer periods(May to October) with July having the highest number of casualties. With a seasonal strenght of 83.76%, intervention resource allocation based on seasonal patterns can be relevant in reducing the number of casualties.  
 
 -----------------------------------------------------------------------------------------
 ### Individual Factors
@@ -106,26 +106,29 @@ visually(q-q plot, box-plot) determined to have a non-normal distribution.
 
 -----------------------------------------------------------------------------------------
 #### Comments
-- The null hypothesis was rejected for all factors versus number of casualties. All parent environmental factors showed statistically detectable differences but with negligible practical magnitude on the number of casualties per accident. The large size of the dataset contributed to the strong statistical significance yet minor effective size.
-- Bad weather does not result in increased casualties per accident. Windy conditions and fog may increase injury severity.
-- Dual carriageways are extremely dangerous for fatal and serious bicycle accidents. Roundabouts and oneway streets had the least severe injuries.
-- Darkness without lights are extremely dangerous. Street lights reduce accident severity. Nightime lit park bicycle paths?? High visibility clothing/stickers.
-- Rush hours shows the safest outcomes despite high traffic volume. Most fatal and serious bicycle accidents occur at night and dawn. Possible reasons: Tiredness, Intoxication, Lighting.
-- Majority of cycle accidents are slight which may indicate effectiveness of current interventions. Severe and fatal injuries are more common in males hence targetting this group in interventions may be helpful.Further investigation to explain the rationale for the gender differences is necessary [Injury severity over time??]
-- Fatal and serious injuries are more common in the elderly. Preventing accidents in older cyclists should be a priority. Targetted campaigns, special cycle features such as collision warning and specialised medical response in areas with elderly cylists may help reduce accidents and manage trauma in elderly cyclists.
-- Most fatal and serious accidents happen on weekends. Emergency Response teams?? may
+- The null hypothesis was rejected for all factors versus number of casualties. All parent environmental factors showed statistically detectable differences but with negligible practical magnitude on the number of casualties per accident. 
+- Bad weather does not result in increased casualties per accident. Windy conditions and fog may increase injury severity. However during snow, windy conditions increase serious but not fatal injuries.
 - For typical road conditions wet, dry and snow had the worst accident severity in descending order.  
+- Dual carriageways are extremely dangerous for fatal and serious bicycle accidents. Roundabouts and oneway streets had the least severe injuries.
+- Darkness without lights are extremely dangerous. Street lights reduce accident severity. Encouraging the use of lit bicycle paths and the use of high visibility clothing/stickers may help reduce fatal injuries.
+- Rush hours shows the safest outcomes despite high traffic volume. Most fatal and serious bicycle accidents occur at night and dawn and day time off peak. Possible reasons may include tiredness, intoxication, and reduced lighting during night/dawn time. Further investigation is required to understand increased severity during day off peak.
+- Accidents are also more severe during the weekends than the weekdays.
+- Majority of cycle accidents have slight injury severity which may indicate effectiveness of current interventions. Severe and fatal injuries are more common in males hence targetting this group in interventions may be helpful. Further investigation to explain the rationale for the gender differences is necessary.
+- Fatal and serious injuries are more common in the elderly. Preventing accidents in older cyclists should be a priority. Targetted campaigns, special cycle features such as collision warning and specialised medical response in areas with elderly cylists may help reduce accidents and manage trauma in elderly cyclists.
+
+
 - High accidents on dry and clear roads
 - Severe accidents on dual carriage way(irrespective of light)
 
 
 -----------------------------------------------------------------------------------------
 #### Limitations
-- The other gender catergory was not investigated due to small numbers. The Chi-square test was not feasible for gender and severity. A Fisher–Freeman–Halton exact test was a considered option but not directly available in python. The 'Other' group was therefore excluded and the test was rerun
+- The other gender catergory was not investigated due to small numbers. The Chi-square test was not feasible for gender and severity. A Kruskal-Wallis test was therefore implemented.
+- The large size of the dataset contributed to the strong statistical significance yet minor effective size. 
 - The speed limit and number of vehicles were not investigated as factors in this analysis.
-- Extensive multivariate analysis was not conducted. - Environmental and human factors were investigated individually. 
+- Extensive multivariate analysis was not conducted. Environmental and human factors were investigated individually. 
 - Missing(road conditions = 0.19% vs flood = 0.03%) and unknown data(weather conditions = 2.9%; third in frequency, road type = 3.70% vs one-way street(0.67%) and slip roads(0.10%)) values were not deleted but appropriately labelled and ignored during analysis. This is because they represented a relevant portion of data relative to other levels under the same variable and removal risked possible distortion.
-- There were outliers in the number of casualties column but there were not removed.
+- There were outliers in the number of casualties column but there were not removed because accidents can unfortunately involved high casualties. Removing outliers may sometimes cloud crisis events.
   
 -----------------------------------------------------------------------------------------
 #### References
